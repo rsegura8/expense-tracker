@@ -55,6 +55,11 @@ const transactions = ref([])
     return Math.floor(Math.random() * 10000000)
   }
 
+  //delete trans
+  const handleTransactionDeleted = (id) => {
+    transactions.value = transactions.value.filter((transaction) => transaction.id !== id)
+  }
+
 </script>
 
 <template>
